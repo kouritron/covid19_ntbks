@@ -1,0 +1,34 @@
+
+
+# **************************************** PYSPARK_PYTHON
+# PYSPARK_PYTHON = python3 
+- You might wanna put this into ~/.profile or something. 
+otherwise even with 'executor driver' mode, when new workers are spawned they might come up
+python2 and that would not work with a python3 driver.
+
+
+export PYSPARK_PYTHON="python3"
+
+
+
+# **************************************** find spark
+import findspark
+findspark.init()
+
+# now you can do
+import pyspark
+
+Although this should not be necessary if you set things up right, 
+or even just pip installed pyspark.
+
+# **************************************** SPARK_HOME
+
+I used to put spark in something like this, and then set 
+SPARK_HOME env var to it:
+
+/home/zu/bin/spark230
+
+
+
+
+
